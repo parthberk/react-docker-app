@@ -7,5 +7,5 @@ before_install:
   - docker build -t parth149/react-docker-app -f Dockerfile.dev .
 
 script:
-  - docker run parth149/react-docker-app npm run test -- --coverage
+  - docker run -e CI=true parth149/react-docker-app npm run test
 
