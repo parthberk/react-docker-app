@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t parth149/Prod-APP -f Dockerfile.dev .
+  - docker build -t parth149/react-docker-app -f Dockerfile.dev .
 
 script:
-  - docker run parth149/Prod-APP npm run test -- --coverage
+  - docker run parth149/react-docker-app npm run test -- --coverage
 
